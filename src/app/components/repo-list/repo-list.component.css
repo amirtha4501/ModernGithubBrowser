@@ -1,0 +1,12 @@
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.message {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 15px;
+  color: #57606a;
+}

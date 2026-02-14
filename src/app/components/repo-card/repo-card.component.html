@@ -1,0 +1,35 @@
+<div class="repo-card">
+
+  <div class="repo-header">
+    <h3>{{ repo().name }}</h3>
+
+    @if (repo().private) {
+      <span class="badge private">Private</span>
+    } @else {
+      <span class="badge public">Public</span>
+    }
+  </div>
+
+  <p class="description">
+    {{ repo().description || 'No description provided.' }}
+  </p>
+
+  <div class="repo-meta">
+    @if (repo().language) {
+      <span class="language">
+        ● {{ repo().language }}
+      </span>
+    }
+
+    <span>⭐ {{ repo().stargazers_count }}</span>
+    <span>🍴 {{ repo().forks_count }}</span>
+  </div>
+
+  <a
+    class="repo-button"
+    [href]="repo().html_url"
+    target="_blank">
+    View on GitHub →
+  </a>
+
+</div>

@@ -1,0 +1,15 @@
+@if (loading()) {
+  <p class="message">Loading repositories...</p>
+}
+
+@if (!loading() && repos().length === 0) {
+  <p class="message">No repositories found.</p>
+}
+
+@if (!loading() && repos().length > 0) {
+  <div class="repo-grid">
+    @for (repo of repos(); track repo.id) {
+      <app-repo-card [repo]="repo"></app-repo-card>
+    }
+  </div>
+}
