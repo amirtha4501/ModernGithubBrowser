@@ -88,6 +88,15 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "development": {
+              "buildTarget": "modern-github-browser:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
         }
       }
     }

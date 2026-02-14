@@ -190,24 +190,131 @@ ng generate component components/search
 ng generate component components/repo-list
 ng generate component components/repo-card
 ng generate service services/github
-
+```
 ---
 
 # 🧪 Run Development Server
+```
 ng serve
-
+```
 
 Open browser:
 
 http://localhost:4200/
 
-🏗 Production Build
+---
+
+## 🏗 Production Build
+```
 ng build --configuration production
+```
 
+Build output: ``` dist/ ```
 
-Build output:
+---
 
-dist/
+# 🧪 End-to-End Testing with Cypress
 
-🧪 Run Tests
-ng test
+This project includes Cypress for End-to-End (E2E) testing of the Modern GitHub Browser application.
+
+### Install Cypress (If Not Already Installed)
+
+Cypress is installed as a dev dependency.
+If needed, install manually:
+
+```
+npm install cypress --save-dev
+```
+
+---
+
+## 📁 Cypress Folder Structure
+```
+modern-github-browser/
+│
+├── cypress/
+│   ├── e2e/
+│   │   ├── home.cy.ts
+│   │   ├── search.cy.ts
+│   │   └── repo-card.cy.ts
+│   │
+│   ├── fixtures/
+│   │   └── repos.json
+│   │
+│   ├── support/
+│   │   ├── commands.ts
+│   │   └── e2e.ts
+│   │
+│   └── tsconfig.json
+│
+├── cypress.config.ts
+└── package.json
+```
+---
+
+## 🧪 Running Cypress (Interactive Mode)
+
+In a new terminal:
+
+```
+npx cypress open
+```
+
+Then:
+- Choose **E2E Testing**
+- Select your preferred browser (Chrome recommended)
+- Click on any ```.cy.ts``` file to run tests
+
+---
+
+## 🧪 Running Cypress (Headless Mode)
+
+Run all tests in terminal:
+
+```
+npx cypress run
+```
+
+This will:
+- Execute all E2E tests
+- Generate screenshots (if failures occur)
+- Generate videos (if configured)
+
+---
+
+## 🧪 Test Coverage Includes
+
+The Cypress tests cover:
+- Application load
+- Search input validation
+- Loading state
+- Successful API response
+- Empty repository response
+- API error handling
+- Repository card UI validation
+- Badge display (Public/Private)
+- Star and fork counts
+- Repository link validation
+
+---
+
+## 📄 Fixtures
+
+Mocked API responses are stored in:
+```
+cypress/fixtures/repos.json
+```
+
+These are used with:
+```
+cy.intercept()
+```
+to simulate GitHub API responses during testing.
+
+---
+
+# 📌 Notes
+
+- Make sure Angular app is running before executing Cypress tests.
+- Cypress uses mocked API responses for stable and repeatable tests.
+- No real GitHub API calls are required during E2E testing.

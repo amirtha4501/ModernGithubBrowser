@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "awesome-project",
+    "description": "An awesome open-source project",
+    "html_url": "https://github.com/testuser/awesome-project",
+    "stargazers_count": 150,
+    "forks_count": 42,
+    "language": "TypeScript",
+    "private": false
+  },
+  {
+    "id": 2,
+    "name": "secret-tool",
+    "description": "A private internal tool",
+    "html_url": "https://github.com/testuser/secret-tool",
+    "stargazers_count": 5,
+    "forks_count": 1,
+    "language": "Python",
+    "private": true
+  },
+  {
+    "id": 3,
+    "name": "no-desc-repo",
+    "description": null,
+    "html_url": "https://github.com/testuser/no-desc-repo",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "language": null,
+    "private": false
+  }
+]
