@@ -3,14 +3,13 @@ import { GithubService } from './services/github.service';
 import { Repository } from './models/repository.model';
 import { SearchComponent } from './components/search/search.component';
 import { RepoListComponent } from './components/repo-list/repo-list.component';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, SearchComponent, RepoListComponent],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    imports: [SearchComponent, RepoListComponent],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 

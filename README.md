@@ -1,10 +1,10 @@
-# 🚀 MODERN GITHUB BROWSER DASHBOARD (Angular 17+)
+# 🚀 MODERN GITHUB BROWSER DASHBOARD (Angular 21+)
 
-A modern Angular application built using **Standalone Components**, **Signals**, and the new **Control Flow syntax** (`@if`, `@for`) to search and explore GitHub repositories using the public GitHub REST API.
+A modern Angular application built using **Standalone Components**, **Signals**, and the new **Control Flow syntax** (`@if`, `@for`) to search and explore GitHub repositories using the public GitHub REST API. This project is now running on **Angular 21**.
 
 ![alt text](./src/assets/image.png)
 
-> Built with Angular 17+ (Standalone Architecture)
+> Built with Angular 21 (Standalone Architecture)
 
 ---
 
@@ -19,13 +19,15 @@ It demonstrates:
 - ✔ Clean component-based architecture
 - ✔ Functional HttpClient setup
 
-⚠️ This project intentionally avoids classic structural directives (`*ngIf`, `*ngFor`) and decorator-based `@Input/@Output` because those are covered in Project 1.
+⚠️ This project intentionally avoids classic structural directives (`*ngIf`, `*ngFor`) and decorator-based `@Input/@Output` because those are covered in Classic GitHub Browser project.
 
 ---
 
 # 🛠 Tech Stack
 
-- Angular 17+
+- Angular 21
+- Experimental Signal Forms
+- Zoneless by default (Experimental)
 - Standalone Components
 - Angular Signals
 - TypeScript
@@ -201,8 +203,6 @@ ng serve
 Open browser:
 
 http://localhost:4200/
-
----
 
 ## 🏗 Production Build
 ```
